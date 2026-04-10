@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сушись как Люся — 35 дней до тела, которое тебе нравится</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0c0e;
+  --bg2: #131317;
+  --card: #1a1a20;
+  --card2: #202028;
+  --text: #f0eee8;
+  --muted: #8a8799;
+  --accent: #e8a87c;
+  --accent2: #c96b4a;
+  --accent-glow: rgba(232,168,124,0.18);
+  --green: #7ec8a0;
+  --border: rgba(232,168,124,0.15);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Mulish',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Unbounded',sans-serif;line-height:1.2}
+a{color:var(--accent);text-decoration:none}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(12,12,14,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.08em}
+.nav-cta{background:var(--accent);color:#0c0c0e;padding:10px 22px;border-radius:100px;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;letter-spacing:.05em;transition:all .3s}
+.nav-cta:hover{background:#fff;transform:translateY(-1px)}
+
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 40px 80px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 80% 60% at 65% 40%,rgba(232,168,124,.12) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 20% 80%,rgba(201,107,74,.08) 0%,transparent 60%)}
+.hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-tag{display:inline-block;background:var(--accent-glow);border:1px solid var(--border);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.12em;padding:6px 16px;border-radius:100px;margin-bottom:28px;text-transform:uppercase}
+.hero h1{font-size:clamp(28px,4vw,52px);font-weight:900;margin-bottom:24px;line-height:1.1}
+.hero h1 span{color:var(--accent)}
+.hero-sub{font-size:17px;color:var(--muted);margin-bottom:40px;max-width:480px;line-height:1.8}
+.hero-sub strong{color:var(--text)}
+.btn-primary{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0c0c0e;font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;letter-spacing:.04em;padding:18px 38px;border-radius:100px;transition:all .3s;border:none;cursor:pointer;box-shadow:0 8px 32px rgba(232,168,124,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(232,168,124,.4);color:#0c0c0e}
+.btn-outline{display:inline-block;border:1px solid var(--border);color:var(--text);font-family:'Unbounded',sans-serif;font-size:12px;font-weight:600;padding:16px 32px;border-radius:100px;transition:all .3s;margin-left:16px}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.hero-stats{display:flex;gap:32px;margin-top:48px}
+.hero-stat-num{font-family:'Unbounded',sans-serif;font-size:28px;font-weight:900;color:var(--accent)}
+.hero-stat-label{font-size:12px;color:var(--muted);margin-top:4px}
+.hero-photo-wrap{border-radius:24px;overflow:hidden;background:var(--card2);aspect-ratio:3/4;position:relative}
+.hero-photo-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(12,12,14,.8) 100%);z-index:1}
+.hero-photo-img{width:100%;height:100%;object-fit:cover}
+.hero-badge{position:absolute;bottom:24px;left:24px;right:24px;z-index:2;background:rgba(12,12,14,.85);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:16px;padding:16px 20px;display:flex;align-items:center;gap:12px}
+.hero-badge-dot{width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(126,200,160,.4)}50%{box-shadow:0 0 0 8px rgba(126,200,160,0)}}
+.hero-badge-text{font-size:13px;color:var(--text)}
+.hero-badge-text strong{color:var(--green)}
+
+section{padding:100px 40px}
+.container{max-width:1100px;margin:0 auto}
+.section-tag{display:inline-block;color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}
+.section-title{font-size:clamp(24px,3vw,42px);font-weight:900;margin-bottom:16px}
+.section-sub{color:var(--muted);font-size:17px;max-width:560px}
+
+.fade-in{opacity:0;transform:translateY(30px);transition:all .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+.pain-section{background:var(--bg2)}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px}
+.pain-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px 28px;transition:all .3s}
+.pain-card:hover{border-color:var(--accent);transform:translateY(-4px);background:var(--card2)}
+.pain-num{font-family:'Unbounded',sans-serif;font-size:11px;color:var(--accent);letter-spacing:.1em;margin-bottom:16px}
+.pain-text{font-size:15px;line-height:1.7}
+
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:60px;align-items:start}
+.why-col-bad,.why-col-good{background:var(--card);border-radius:24px;padding:40px;border:1px solid var(--border)}
+.why-col-good{border-color:rgba(126,200,160,.3);background:rgba(126,200,160,.04)}
+.why-col-label{font-family:'Unbounded',sans-serif;font-size:11px;letter-spacing:.1em;margin-bottom:28px;padding:6px 14px;border-radius:100px;display:inline-block}
+.why-col-bad .why-col-label{background:rgba(255,80,80,.1);color:#ff8080}
+.why-col-good .why-col-label{background:rgba(126,200,160,.15);color:var(--green)}
+.why-item{display:flex;gap:12px;margin-bottom:20px;font-size:15px;line-height:1.6}
+.why-icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:2px}
+.why-col-bad .why-icon{background:rgba(255,80,80,.15);color:#ff8080}
+.why-col-good .why-icon{background:rgba(126,200,160,.2);color:var(--green)}
+
+.program-section{background:var(--bg2)}
+.program-list{margin-top:60px;display:flex;flex-direction:column;gap:16px}
+.program-item{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px 32px;display:grid;grid-template-columns:56px 1fr auto;gap:24px;align-items:center;transition:all .3s}
+.program-item:hover{border-color:var(--accent);background:var(--card2)}
+.program-num{width:56px;height:56px;border-radius:16px;background:var(--accent-glow);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--accent)}
+.program-title{font-family:'Unbounded',sans-serif;font-size:15px;font-weight:700;margin-bottom:6px}
+.program-desc{font-size:14px;color:var(--muted)}
+.program-badge{background:var(--accent-glow);border:1px solid var(--border);color:var(--accent);font-size:11px;font-weight:700;padding:6px 14px;border-radius:100px;white-space:nowrap}
+
+.expert-inner{display:grid;grid-template-columns:420px 1fr;gap:80px;align-items:center}
+.expert-photo-wrap{border-radius:28px;overflow:hidden;background:var(--card2);aspect-ratio:3/4}
+.expert-photo-wrap img{width:100%;height:100%;object-fit:cover}
+.expert-name{font-family:'Unbounded',sans-serif;font-size:clamp(22px,2.5vw,36px);font-weight:900;margin-bottom:8px}
+.expert-title{color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.05em;margin-bottom:32px}
+.expert-awards{display:flex;flex-direction:column;gap:16px;margin-bottom:36px}
+.expert-award{display:flex;gap:16px;align-items:flex-start}
+.expert-award-icon{width:40px;height:40px;border-radius:12px;background:var(--accent-glow);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.expert-award-text{font-size:14px;line-height:1.6}
+.expert-award-text strong{color:var(--text);display:block;font-size:15px;margin-bottom:2px}
+.expert-quote{background:var(--card);border-left:3px solid var(--accent);border-radius:0 16px 16px 0;padding:24px 28px;font-size:16px;line-height:1.8;color:var(--muted);font-style:italic}
+.expert-quote strong{color:var(--text);font-style:normal}
+
+.results-section{background:var(--bg2)}
+.results-marquee-wrap{overflow:hidden;margin-top:60px;margin-left:-40px;margin-right:-40px}
+.results-marquee{display:flex;gap:20px;animation:marquee 30s linear infinite;width:max-content}
+.results-marquee:hover{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;width:280px;flex-shrink:0}
+.result-name{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px}
+.result-stats{color:var(--accent);font-size:13px;font-weight:700}
+.result-text{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6}
+
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.review-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;transition:all .3s}
+.review-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.review-stars{color:var(--accent);font-size:14px;margin-bottom:14px}
+.review-text{font-size:14px;line-height:1.8;margin-bottom:20px;color:var(--muted)}
+.review-text strong{color:var(--text)}
+.review-author{font-size:13px;font-weight:700}
+.review-result{font-size:12px;color:var(--green);margin-top:2px}
+
+.urgency-section{background:linear-gradient(135deg,rgba(232,168,124,.08),rgba(201,107,74,.04));border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;padding:80px 40px}
+.urgency-label{font-size:13px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.urgency-title{font-size:clamp(20px,3vw,36px);font-weight:900;margin-bottom:40px}
+.timer{display:flex;gap:24px;justify-content:center;margin-bottom:48px}
+.timer-block{text-align:center}
+.timer-num{font-family:'Unbounded',sans-serif;font-size:clamp(36px,5vw,64px);font-weight:900;color:var(--accent);background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px 24px;min-width:90px;display:block}
+.timer-label{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
+.timer-sep{font-family:'Unbounded',sans-serif;font-size:48px;color:var(--accent);align-self:flex-start;padding-top:20px;opacity:.5}
+
+.tariffs-section{background:var(--bg2)}
+.tariffs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;align-items:start}
+.tariff-card{background:var(--card);border:1px solid var(--border);border-radius:28px;padding:40px 32px;position:relative;transition:all .3s}
+.tariff-card:hover{transform:translateY(-6px)}
+.tariff-card.featured{border-color:var(--accent);background:linear-gradient(135deg,rgba(232,168,124,.06),var(--card));transform:scale(1.02)}
+.tariff-card.featured:hover{transform:scale(1.02) translateY(-6px)}
+.tariff-popular{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0c0c0e;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;padding:6px 20px;border-radius:100px;letter-spacing:.08em;white-space:nowrap}
+.tariff-name{font-family:'Unbounded',sans-serif;font-size:14px;font-weight:700;letter-spacing:.05em;color:var(--muted);margin-bottom:24px}
+.tariff-price-old{font-size:18px;color:var(--muted);text-decoration:line-through;margin-bottom:4px}
+.tariff-price{font-family:'Unbounded',sans-serif;font-size:36px;font-weight:900;color:var(--accent);margin-bottom:8px}
+.tariff-installment{font-size:13px;color:var(--muted);margin-bottom:32px}
+.tariff-divider{border:none;border-top:1px solid var(--border);margin:24px 0}
+.tariff-features{list-style:none;margin-bottom:32px}
+.tariff-features li{display:flex;gap:12px;font-size:14px;margin-bottom:14px;line-height:1.5}
+.check{color:var(--green);flex-shrink:0;font-size:16px;margin-top:1px}
+.cross{color:var(--muted);flex-shrink:0;font-size:16px;margin-top:1px}
+.cross+span{color:var(--muted)}
+.btn-tariff{display:block;text-align:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0c0c0e;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;letter-spacing:.04em;padding:16px;border-radius:100px;transition:all .3s;box-shadow:0 8px 24px rgba(232,168,124,.2)}
+.btn-tariff:hover{box-shadow:0 12px 32px rgba(232,168,124,.4);transform:translateY(-2px);color:#0c0c0e}
+.btn-tariff-outline{display:block;text-align:center;border:1px solid var(--border);color:var(--text);font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;padding:16px;border-radius:100px;transition:all .3s}
+.btn-tariff-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+.faq-list{margin-top:60px;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s}
+.faq-item.open{border-color:var(--accent)}
+.faq-q{padding:24px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:700;font-size:15px}
+.faq-arrow{width:32px;height:32px;border-radius:50%;background:var(--card2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;font-size:18px;color:var(--accent)}
+.faq-item.open .faq-arrow{transform:rotate(45deg);background:var(--accent-glow)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;font-size:14px;color:var(--muted);line-height:1.8;padding:0 28px}
+.faq-item.open .faq-a{max-height:300px;padding:0 28px 24px}
+
+.final-cta{text-align:center;padding:120px 40px;background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(232,168,124,.1) 0%,transparent 70%)}
+.final-cta h2{font-size:clamp(24px,4vw,52px);margin-bottom:24px}
+.final-cta p{color:var(--muted);font-size:18px;max-width:520px;margin:0 auto 48px}
+
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px;text-align:center}
+.footer-inner{max-width:700px;margin:0 auto}
+.footer-logo{font-family:'Unbounded',sans-serif;font-size:14px;font-weight:700;color:var(--accent);margin-bottom:20px}
+.footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.footer-links a{font-size:13px;color:var(--muted)}
+.footer-links a:hover{color:var(--accent)}
+.footer-legal{font-size:12px;color:var(--muted);line-height:1.8}
+
+@media(max-width:768px){
+  nav{padding:16px 20px}
+  section{padding:70px 20px}
+  .hero{padding:100px 20px 60px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-photo{order:-1}
+  .hero-photo-wrap{aspect-ratio:1/1}
+  .hero h1{font-size:28px}
+  .hero-stats{gap:20px}
+  .pain-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .program-item{grid-template-columns:48px 1fr}
+  .program-badge{display:none}
+  .expert-inner{grid-template-columns:1fr;gap:40px}
+  .expert-photo-wrap{max-width:300px;aspect-ratio:3/4}
+  .reviews-grid{grid-template-columns:1fr}
+  .tariffs-grid{grid-template-columns:1fr}
+  .tariff-card.featured{transform:none}
+  .tariff-card.featured:hover{transform:translateY(-6px)}
+  .timer{gap:10px}
+  .timer-num{font-size:32px;min-width:68px;padding:12px 14px}
+  .timer-sep{font-size:32px;padding-top:16px}
+  .btn-outline{display:none}
+  .results-marquee-wrap{margin-left:-20px;margin-right:-20px}
+  .final-cta h2{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">СУШИСЬ КАК ЛЮСЯ</div>
+  <a href="#tariffs" class="nav-cta">Выбрать тариф</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-content fade-in">
+      <div class="hero-tag">Следующий набор — с 17 апреля</div>
+      <h1>Хватит прятаться<br>в оверсайз.<br><span>Пора показать,<br>что под ним.</span></h1>
+      <p class="hero-sub">
+        <strong>35 дней</strong> — и ты смотришь в зеркало с удовольствием.
+        Без голодовок, без фанатизма, без «начну с понедельника».
+        Просто система и чемпионка, которая не даст слиться.
+      </p>
+      <div>
+        <a href="#tariffs" class="btn-primary">Хочу это тело</a>
+        <a href="#program" class="btn-outline">Что входит?</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">35</div>
+          <div class="hero-stat-label">дней программы</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">−7 кг</div>
+          <div class="hero-stat-label">средний результат</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">10+</div>
+          <div class="hero-stat-label">лет опыта</div>
+        </div>
+      </div>
+    </div>
+    <div class="fade-in" style="animation-delay:.2s">
+      <div class="hero-photo-wrap">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Людмила Жаботинская" class="hero-photo-img">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          <div class="hero-badge-text"><strong>Набор открыт</strong> · Осталось мест: 27</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain-section">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">Узнаёшь себя?</div>
+      <h2 class="section-title">Это про тебя — или нет?</h2>
+      <p class="section-sub">Если хотя бы 2 из 6 попали в точку — ты точно пришла по адресу.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card fade-in"><div class="pain-num">01</div><div class="pain-text">Смотришь на случайное фото с вечеринки и <strong>не узнаёшь себя</strong>. Думаешь: «это что, я так выгляжу?»</div></div>
+      <div class="pain-card fade-in" style="animation-delay:.1s"><div class="pain-num">02</div><div class="pain-text">Открываешь шкаф — <strong>носить нечего</strong>. Всё любимое жмёт. Новое специально берёшь на размер больше.</div></div>
+      <div class="pain-card fade-in" style="animation-delay:.2s"><div class="pain-num">03</div><div class="pain-text">Садишься на диету, <strong>срываешься на 5-й день</strong>, набираешь ещё больше. Круг замкнулся, сил уже нет.</div></div>
+      <div class="pain-card fade-in" style="animation-delay:.3s"><div class="pain-num">04</div><div class="pain-text">На пляже ловишь себя на том, что <strong>не хочешь снимать парео</strong>. И злишься на себя за это.</div></div>
+      <div class="pain-card fade-in" style="animation-delay:.4s"><div class="pain-num">05</div><div class="pain-text">Живот после еды раздут <strong>как на 4-м месяце</strong>. Отёки с утра. Ноги тяжёлые, энергии ноль.</div></div>
+      <div class="pain-card fade-in" style="animation-delay:.5s"><div class="pain-num">06</div><div class="pain-text">Знаешь как надо, но <strong>никак не можешь начать снова</strong>. Опять откладываешь на «после праздников».</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section>
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">Почему именно сушка</div>
+      <h2 class="section-title">Обычная диета против сушки — честно</h2>
+      <p class="section-sub">Ты уже пробовала «просто меньше есть». Вот почему это не работает так, как надо.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-col-bad fade-in">
+        <div class="why-col-label">❌ Обычная диета</div>
+        <div class="why-item"><div class="why-icon">✗</div><span>Сжигает мышцы вместе с жиром — тело меньше, но рыхлое и дряблое</span></div>
+        <div class="why-item"><div class="why-icon">✗</div><span>Цифра на весах падает, но целлюлит и «ушки» никуда не деваются</span></div>
+        <div class="why-item"><div class="why-icon">✗</div><span>Через 2 недели после диеты — откат. Часто ещё больше, чем было</span></div>
+        <div class="why-item"><div class="why-icon">✗</div><span>Голод, раздражение, срывы — и снова стартовая точка</span></div>
+        <div class="why-item"><div class="why-icon">✗</div><span>Ты становишься просто уменьшенной, обвисшей версией себя</span></div>
+      </div>
+      <div class="why-col-good fade-in" style="animation-delay:.2s">
+        <div class="why-col-label">✓ Сушись как Люся</div>
+        <div class="why-item"><div class="why-icon">✓</div><span>Чистое жиросжигание при сохранении мышц — тело упругое и рельефное</span></div>
+        <div class="why-item"><div class="why-icon">✓</div><span>Проблемные зоны уходят целенаправленно: живот, бёдра, руки</span></div>
+        <div class="why-item"><div class="why-icon">✓</div><span>Результат держится — потому что меняешь привычки, а не просто терпишь</span></div>
+        <div class="why-item"><div class="why-icon">✓</div><span>Ешь вкусно и сыто — просто по другой, рабочей системе</span></div>
+        <div class="why-item"><div class="why-icon">✓</div><span>Ежедневная поддержка лично от Люси — она не даст слиться</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="program-section" id="program">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">Что внутри</div>
+      <h2 class="section-title">Программа, которая реально работает</h2>
+      <p class="section-sub">Не набор файлов. Живая система с живым тренером.</p>
+    </div>
+    <div class="program-list">
+      <div class="program-item fade-in">
+        <div class="program-num">01</div>
+        <div><div class="program-title">Тренировки дома — в прямом эфире</div><div class="program-desc">Я буду в эфире и раздавать нагрузку лично. Меня на паузу не поставишь — придётся делать. 30–40 минут, 3 раза в неделю. Все записи остаются у тебя.</div></div>
+        <div class="program-badge">12 тренировок</div>
+      </div>
+      <div class="program-item fade-in" style="animation-delay:.1s">
+        <div class="program-num">02</div>
+        <div><div class="program-title">Программа для тренажёрного зала</div><div class="program-desc">60+ видеоразборов упражнений с объяснением техники и настройкой тренажёров. Для тех, кто хочет результат быстрее.</div></div>
+        <div class="program-badge">60+ видео</div>
+      </div>
+      <div class="program-item fade-in" style="animation-delay:.2s">
+        <div class="program-num">03</div>
+        <div><div class="program-title">Готовые рационы питания на 5 недель</div><div class="program-desc">Весовые категории от 45 до 85+ кг. Завтрак, обед, ужин, перекусы — с подсчитанным КБЖУ. Вкусно, разнообразно, без «опять гречка».</div></div>
+        <div class="program-badge">5 недель</div>
+      </div>
+      <div class="program-item fade-in" style="animation-delay:.3s">
+        <div class="program-num">04</div>
+        <div><div class="program-title">Личная обратная связь каждый день</div><div class="program-desc">Я лично проверяю отчёты, пишу голосовые, даю индивидуальные рекомендации. Не куратор, не бот — я сама. Это то, чего нет у других.</div></div>
+        <div class="program-badge">Ежедневно</div>
+      </div>
+      <div class="program-item fade-in" style="animation-delay:.4s">
+        <div class="program-num">05</div>
+        <div><div class="program-title">Эфиры с нутрициологом, психологом, эндокринологом</div><div class="program-desc">Разберёшься в гормонах, поймёшь почему срываешься, узнаешь как питаться без загонов. Записи остаются навсегда.</div></div>
+        <div class="program-badge">3 эфира</div>
+      </div>
+      <div class="program-item fade-in" style="animation-delay:.5s">
+        <div class="program-num">06</div>
+        <div><div class="program-title">Бонусы: лимфодренаж, МФР, растяжка, осанка</div><div class="program-desc">Утренние комплексы, которые снимают отёки и «включают» тело на день. Плюс гайды по БАДам и лайфхаки ускорения результата.</div></div>
+        <div class="program-badge">Бонус</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERT -->
+<section>
+  <div class="container">
+    <div class="expert-inner">
+      <div class="expert-photo-wrap fade-in">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Людмила Жаботинская">
+      </div>
+      <div class="fade-in" style="animation-delay:.2s">
+        <div class="section-tag">Твой тренер</div>
+        <h2 class="expert-name">Людмила<br>Жаботинская</h2>
+        <div class="expert-title">Тренер · Спортсмен · Автор программы</div>
+        <div class="expert-awards">
+          <div class="expert-award"><div class="expert-award-icon">🏆</div><div class="expert-award-text"><strong>Двухкратная чемпионка России</strong>в категории «Фитнес-бикини»</div></div>
+          <div class="expert-award"><div class="expert-award-icon">🥉</div><div class="expert-award-text"><strong>Бронзовый призёр Чемпионата мира</strong>по фитнесу и бодибилдингу</div></div>
+          <div class="expert-award"><div class="expert-award-icon">🎯</div><div class="expert-award-text"><strong>10+ лет тренерской деятельности</strong>более 500 учениц с реальными результатами</div></div>
+          <div class="expert-award"><div class="expert-award-icon">🏅</div><div class="expert-award-text"><strong>Трёхкратная абсолютная чемпионка</strong>Калининградской области</div></div>
+        </div>
+        <div class="expert-quote">
+          Я сама прошла через это тело — через срывы, через «не получается», через стресс и гормоны. И я знаю, <strong>как сделать так, чтобы у тебя получилось</strong>. Потому что видела это сотни раз.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results-section">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">Результаты участниц</div>
+      <h2 class="section-title">Они уже прошли. Смотри сама.</h2>
+      <p class="section-sub">Реальные девочки, реальные цифры.</p>
+    </div>
+  </div>
+  <div class="results-marquee-wrap fade-in">
+    <div class="results-marquee">
+      <div class="result-card" style="background:var(--card2)"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Анастасия, 28 лет</div><div class="result-stats">−6.5 кг · −9 см в талии</div><div class="result-text">«Никогда не верила, что за месяц так можно. Теперь верю.»</div></div>
+      <div class="result-card"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Марина, 34 года</div><div class="result-stats">−5 кг · −7 см в бёдрах</div><div class="result-text">«После двух родов думала — уже невозможно. Ошибалась.»</div></div>
+      <div class="result-card" style="background:var(--card2)"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Екатерина, 41 год</div><div class="result-stats">−8 кг · −11 см в животе</div><div class="result-text">«Дочь говорит — ты помолодела на 10 лет. Это лучший комплимент.»</div></div>
+      <div class="result-card"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Ольга, 26 лет</div><div class="result-stats">−4 кг · рельеф появился</div><div class="result-text">«Надела короткое платье на пляже без парео. Это победа.»</div></div>
+      <div class="result-card" style="background:var(--card2)"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Светлана, 38 лет</div><div class="result-stats">−7 кг · ушли отёки</div><div class="result-text">«Муж не поверил. Пришлось показать фотки до.»</div></div>
+      <div class="result-card"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Виктория, 31 год</div><div class="result-stats">−5.5 кг · −8 см в талии</div><div class="result-text">«В джинсы не влезала 2 года. Теперь влезаю — и великоваты.»</div></div>
+      <!-- duplicate for loop -->
+      <div class="result-card" style="background:var(--card2)"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Анастасия, 28 лет</div><div class="result-stats">−6.5 кг · −9 см в талии</div><div class="result-text">«Никогда не верила, что за месяц так можно. Теперь верю.»</div></div>
+      <div class="result-card"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Марина, 34 года</div><div class="result-stats">−5 кг · −7 см в бёдрах</div><div class="result-text">«После двух родов думала — уже невозможно. Ошибалась.»</div></div>
+      <div class="result-card" style="background:var(--card2)"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Екатерина, 41 год</div><div class="result-stats">−8 кг · −11 см в животе</div><div class="result-text">«Дочь говорит — ты помолодела на 10 лет. Это лучший комплимент.»</div></div>
+      <div class="result-card"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Ольга, 26 лет</div><div class="result-stats">−4 кг · рельеф появился</div><div class="result-text">«Надела короткое платье на пляже без парео. Это победа.»</div></div>
+      <div class="result-card" style="background:var(--card2)"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Светлана, 38 лет</div><div class="result-stats">−7 кг · ушли отёки</div><div class="result-text">«Муж не поверил. Пришлось показать фотки до.»</div></div>
+      <div class="result-card"><div style="text-align:center;padding:20px 0;font-size:40px">📸</div><div class="result-name">Виктория, 31 год</div><div class="result-stats">−5.5 кг · −8 см в талии</div><div class="result-text">«В джинсы не влезала 2 года. Теперь влезаю — и великоваты.»</div></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="reviews-grid">
+      <div class="review-card fade-in"><div class="review-stars">★★★★★</div><div class="review-text">«Я прошла 4 разных марафона до этого. <strong>Это первый, где я не бросила на второй неделе.</strong> Люся пишет каждый день, не даёт скиснуть.»</div><div class="review-author">Наталья П.</div><div class="review-result">−5 кг за 35 дней</div></div>
+      <div class="review-card fade-in" style="animation-delay:.15s"><div class="review-stars">★★★★★</div><div class="review-text">«Думала, с моими гормонами вообще ничего не получится. Но Люся <strong>подстроила питание под мою ситуацию</strong> — и пошло!»</div><div class="review-author">Дарья К.</div><div class="review-result">−6 кг · щитовидка под контролем</div></div>
+      <div class="review-card fade-in" style="animation-delay:.3s"><div class="review-stars">★★★★★</div><div class="review-text">«Самое крутое — <strong>я не голодала ни одного дня.</strong> Ела вкусно. И при этом похудела больше, чем когда сидела на диете.»</div><div class="review-author">Ирина М.</div><div class="review-result">−7.5 кг · без голодовок</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCY -->
+<section class="urgency-section">
+  <div class="urgency-label fade-in">Цена вырастет через</div>
+  <h2 class="urgency-title fade-in">Успей войти по текущей цене</h2>
+  <div class="timer fade-in">
+    <div class="timer-block"><span class="timer-num" id="t-days">00</span><div class="timer-label">дней</div></div>
+    <div class="timer-sep">:</div>
+    <div class="timer-block"><span class="timer-num" id="t-hours">00</span><div class="timer-label">часов</div></div>
+    <div class="timer-sep">:</div>
+    <div class="timer-block"><span class="timer-num" id="t-mins">00</span><div class="timer-label">минут</div></div>
+    <div class="timer-sep">:</div>
+    <div class="timer-block"><span class="timer-num" id="t-secs">00</span><div class="timer-label">секунд</div></div>
+  </div>
+  <a href="#tariffs" class="btn-primary fade-in">Записаться сейчас</a>
+</section>
+
+<!-- TARIFFS -->
+<section class="tariffs-section" id="tariffs">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">Тарифы</div>
+      <h2 class="section-title">Выбери, как тебе кайфовее</h2>
+      <p class="section-sub">Большинство, кто получает лучший результат — выбирают тариф с личной поддержкой.</p>
+    </div>
+    <div class="tariffs-grid">
+      <div class="tariff-card fade-in">
+        <div class="tariff-name">САМА</div>
+        <div class="tariff-price-old">20 000 ₽</div>
+        <div class="tariff-price">12 000 ₽</div>
+        <div class="tariff-installment">или ~2 400 ₽/мес в рассрочку</div>
+        <hr class="tariff-divider">
+        <ul class="tariff-features">
+          <li><span class="check">✓</span><span>12 тренировок для дома (запись)</span></li>
+          <li><span class="check">✓</span><span>60+ видеоуроков по технике зала</span></li>
+          <li><span class="check">✓</span><span>5 недель готовых рационов питания</span></li>
+          <li><span class="check">✓</span><span>Лимфодренаж, МФР, растяжка, осанка</span></li>
+          <li><span class="check">✓</span><span>Гайды по БАДам и аксессуарам</span></li>
+          <li><span class="cross">✗</span><span>Личная обратная связь от Люси</span></li>
+          <li><span class="cross">✗</span><span>Проверка техники и питания</span></li>
+          <li><span class="cross">✗</span><span>Эфиры с экспертами</span></li>
+        </ul>
+        <a href="https://t.me/lusy_vkurse" class="btn-tariff-outline">Оформить</a>
+      </div>
+      <div class="tariff-card featured fade-in" style="animation-delay:.15s">
+        <div class="tariff-popular">🔥 Хит продаж</div>
+        <div class="tariff-name">С ПОДДЕРЖКОЙ</div>
+        <div class="tariff-price-old">25 000 ₽</div>
+        <div class="tariff-price">15 000 ₽</div>
+        <div class="tariff-installment">или ~3 000 ₽/мес в рассрочку</div>
+        <hr class="tariff-divider">
+        <ul class="tariff-features">
+          <li><span class="check">✓</span><span>14 живых тренировок в прямом эфире</span></li>
+          <li><span class="check">✓</span><span>60+ видеоуроков по технике зала</span></li>
+          <li><span class="check">✓</span><span>5 недель готовых рационов питания</span></li>
+          <li><span class="check">✓</span><span>Ежедневная личная обратная связь</span></li>
+          <li><span class="check">✓</span><span>Проверка техники и питания в чат-боте</span></li>
+          <li><span class="check">✓</span><span>Закрытый чат участниц</span></li>
+          <li><span class="check">✓</span><span>Эфиры с нутрициологом и психологом</span></li>
+          <li><span class="check">✓</span><span>Лимфодренаж, МФР, растяжка, осанка</span></li>
+        </ul>
+        <a href="https://t.me/lusy_vkurse" class="btn-tariff">Хочу это тело →</a>
+      </div>
+      <div class="tariff-card fade-in" style="animation-delay:.3s">
+        <div class="tariff-name">ЛИЧНО СО МНОЙ</div>
+        <div class="tariff-price-old">60 000 ₽</div>
+        <div class="tariff-price">40 000 ₽</div>
+        <div class="tariff-installment">или ~8 000 ₽/мес в рассрочку</div>
+        <hr class="tariff-divider">
+        <ul class="tariff-features">
+          <li><span class="check">✓</span><span>Всё из тарифа «С поддержкой»</span></li>
+          <li><span class="check">✓</span><span>Индивидуальный план тренировок и питания</span></li>
+          <li><span class="check">✓</span><span>4 тренировки по видеосвязи лично со мной</span></li>
+          <li><span class="check">✓</span><span>2 стратегических созвона по прогрессу</span></li>
+          <li><span class="check">✓</span><span>Проверка формы каждые 2.5 недели</span></li>
+          <li><span class="check">✓</span><span>Личный чат 1 на 1 · 24/7</span></li>
+          <li><span class="check">✓</span><span>Ведение 3–6 месяцев после окончания</span></li>
+        </ul>
+        <a href="https://t.me/lusy_vkurse" class="btn-tariff-outline">Написать Люсе</a>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:32px">Доступна рассрочка и оплата частями через Яндекс Сплит</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">Вопросы и ответы</div>
+      <h2 class="section-title">Ты наверняка думаешь о чём-то из этого</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item fade-in"><div class="faq-q" onclick="toggleFaq(this)"><span>У меня совсем нет времени. Как это впишется в мой график?</span><div class="faq-arrow">+</div></div><div class="faq-a">Тренировки — 30–40 минут, 3 раза в неделю. Утренние комплексы — 10–15 минут. Если есть время смотреть Reels — время есть. Все записи сохраняются, смотришь когда удобно.</div></div>
+      <div class="faq-item fade-in"><div class="faq-q" onclick="toggleFaq(this)"><span>Я никогда не занималась спортом. Справлюсь?</span><div class="faq-arrow">+</div></div><div class="faq-a">Да. Программа построена так, что начинать можно с нуля. Показываю технику подробно, есть упрощённые варианты упражнений. Главное — желание. С остальным справимся вместе.</div></div>
+      <div class="faq-item fade-in"><div class="faq-q" onclick="toggleFaq(this)"><span>Нужно ли покупать спортивное питание или добавки?</span><div class="faq-arrow">+</div></div><div class="faq-a">Нет. Всё питание строится на обычных продуктах из магазина. Гайд по БАДам есть, но это опционально — без них результат тоже будет.</div></div>
+      <div class="faq-item fade-in"><div class="faq-q" onclick="toggleFaq(this)"><span>Что если у меня проблемы с коленями или спиной?</span><div class="faq-arrow">+</div></div><div class="faq-a">Напиши мне до старта — разберём твою ситуацию и адаптируем программу. Есть модификации упражнений с учётом ограничений. Главное — не молчать.</div></div>
+      <div class="faq-item fade-in"><div class="faq-q" onclick="toggleFaq(this)"><span>Будут ли записи тренировок и эфиров?</span><div class="faq-arrow">+</div></div><div class="faq-a">Да, все тренировки и эфиры записываются и остаются у тебя после окончания. Разные часовые пояса — не проблема.</div></div>
+      <div class="faq-item fade-in"><div class="faq-q" onclick="toggleFaq(this)"><span>Можно ли в рассрочку?</span><div class="faq-arrow">+</div></div><div class="faq-a">Да, доступна рассрочка через Яндекс Сплит и другие сервисы. Оплата картой, СБП. Для уточнения — напиши в Telegram: @lusy_vkurse.</div></div>
+      <div class="faq-item fade-in"><div class="faq-q" onclick="toggleFaq(this)"><span>Я пробовала марафоны и срывалась. Почему сейчас будет иначе?</span><div class="faq-arrow">+</div></div><div class="faq-a">Потому что я лично пишу каждой участнице каждый день. Не куратор, не бот — я сама. Срываться сложнее, когда знаешь, что кто-то ждёт твой отчёт. Плюс питание без запретов — срывов меньше по определению.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <div class="fade-in">
+      <h2>Хватит ждать<br>идеального момента.</h2>
+      <p>Он не придёт. Но придёт апрель — и либо ты уже в деле, либо снова смотришь на чужие результаты.</p>
+      <a href="#tariffs" class="btn-primary" style="font-size:15px;padding:22px 48px">Я в деле →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">СУШИСЬ КАК ЛЮСЯ</div>
+    <div class="footer-links">
+      <a href="https://online.lusyvkurse.ru/privacypolicy">Политика конфиденциальности</a>
+      <a href="https://lusyvkurse.getcourse.ru/offerta_syshka">Публичная оферта</a>
+      <a href="https://t.me/lusy_vkurse">Telegram</a>
+    </div>
+    <div class="footer-legal">
+      ИП Жаботинская Людмила Рафаиловна · ИНН 421412899230 · ОГРНИП 321392600031252<br>
+      luska1313@mail.ru · +7 995 257-08-06<br><br>
+      Программа носит информационный характер и не является медицинской услугой. Результаты индивидуальны.
+    </div>
+  </div>
+</footer>
+
+<script>
+// Fade in on scroll
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold: 0.1});
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+// Timer — 3 days from now
+function tick() {
+  const end = new Date(); end.setDate(end.getDate()+3); end.setHours(23,59,59,0);
+  const diff = end - new Date();
+  if(diff<=0) return;
+  const pad = n => String(Math.floor(n)).padStart(2,'0');
+  document.getElementById('t-days').textContent = pad(diff/86400000);
+  document.getElementById('t-hours').textContent = pad((diff%86400000)/3600000);
+  document.getElementById('t-mins').textContent = pad((diff%3600000)/60000);
+  document.getElementById('t-secs').textContent = pad((diff%60000)/1000);
+}
+tick(); setInterval(tick, 1000);
+
+// FAQ
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if(!open) item.classList.add('open');
+}
+</script>
+</body>
+</html>
